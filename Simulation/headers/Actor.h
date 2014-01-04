@@ -9,22 +9,24 @@
 #ifndef Survive_Simulation_Actor_h
 #define Survive_Simulation_Actor_h
 
-class Actor
+namespace Survive
 {
+	namespace Simulation 
+	{
+		class Actor
+		{
 
-public:
-    Actor();
+		public:
+			Actor();
     
-    int GetActorID();
+			int GetActorID();
     
-private:
-    int actorID;
-    
-    static int CreateActorID();
-    
-    
-    
-};
-
+		private:
+			int actorID;
+			static int nextActorID;
+			static int CreateActorID();
+    	};
+	}
+}
 
 #endif

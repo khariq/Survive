@@ -8,8 +8,16 @@
 
 #include "headers/Actor.h"
 
+using namespace Survive::Simulation;
+
+int Actor::nextActorID = 0;
 
 Actor::Actor()
 {
-    
+	actorID = CreateActorID();
+}
+
+int Actor::CreateActorID()
+{
+	return nextActorID++;
 }
