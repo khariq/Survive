@@ -2,9 +2,11 @@
 #define Survive_Simulation_Inventory_h
 
 #include <map>
+#include <memory>
 #include "item.h"
 
-#define InventoryMap std::map<int, Item*>
+#define InventoryMap std::map<std::string, std::shared_ptr<Item>>
+#define ItemPtr std::shared_ptr<Item>
 
 namespace Survive
 {
@@ -14,7 +16,18 @@ namespace Survive
 		{
 		public:
 			Inventory();
-			void AddItem(Item&);
+			Inventory(const Inventory& copy);
+
+			bool ContainsItem(const Item&);
+			
+			void AddItem(const Item&);
+			void RemoveItem(const Item&);
+			
+			Inventory operator+(const Item& add) const;
+			Inventory operator+=(const Item& add);
+			Inventory operator-(const Item& remove) const;
+			Inventory operator-=(const Item& remove);
+
 		private:
 			InventoryMap inventory;
 		};

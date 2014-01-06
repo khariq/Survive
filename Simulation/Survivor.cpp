@@ -42,5 +42,6 @@ void Survivor::CreateInventory()
 
 void Survivor::PickupItem(Item& item)
 {
+
 	inventory->AddItem(item);
 }

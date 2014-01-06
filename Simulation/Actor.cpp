@@ -17,6 +17,11 @@ Actor::Actor()
 	actorID = CreateActorID();
 }
 
+int Actor::GetActorID() const
+{
+	return actorID;
+}
+
 int Actor::CreateActorID()
 {
 	return nextActorID++;

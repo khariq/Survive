@@ -19,7 +19,7 @@ namespace Survive
 		public:
 			Actor();
     
-			int GetActorID();
+			int GetActorID() const;
     
 		private:
 			int actorID;
