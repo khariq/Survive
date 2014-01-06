@@ -5,6 +5,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 #include "../Simulation/headers/Inventory.h"
 #include "../Simulation/headers/Item.h"
+#include <algorithm>
 
 namespace SimulationTests
 {		
@@ -79,6 +80,20 @@ namespace SimulationTests
 			inventory -= testItem;
 
 			Assert::IsFalse(inventory.ContainsItem(testItem));
+
+		}
+
+		TEST_METHOD(ListItems)
+		{
+			Survive::Simulation::Inventory inventory;
+			Survive::Simulation::Item testItem("Test Item");
+			inventory += testItem;
+
+			Assert::IsTrue(inventory.ContainsItem(testItem));
+
+			InventoryList listOfContents = inventory.Contents();
+
+			Assert::IsFalse(std::find(listOfContents.begin(), listOfContents.end(), testItem.Name()) == listOfContents.end());
 
 		}
 

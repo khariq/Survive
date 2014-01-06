@@ -4,12 +4,6 @@
 using namespace std;
 using namespace Survive::Simulation;
 
-Survivor::~Survivor()
-{
-	if (inventory != NULL)
-		delete inventory;
-}
-
 Survivor::Survivor()
 {
 	CreateInventory();
@@ -37,11 +31,10 @@ Survivor::Survivor(string _name, int _body, int _strength, int _willpower, int _
 
 void Survivor::CreateInventory()
 {
-	inventory = new Inventory();
+	inventory = std::make_shared<Inventory>();
 }
 
 void Survivor::PickupItem(Item& item)
 {
-
 	inventory->AddItem(item);
 }

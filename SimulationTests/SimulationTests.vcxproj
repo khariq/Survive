@@ -91,10 +91,11 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="InventoryTests.cpp" />
+    <ClCompile Include="SurvivorTests.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Build\Survive-Simulation\Survive-Simulation.vcxproj">
-      <Project>{fe457065-d42c-4fdd-9c8b-222e58aefdab}</Project>
+    <ProjectReference Include="..\Build\Survive\Survive-Simulation\Survive-Simulation.vcxproj">
+      <Project>{f73f3cf8-5e62-48c9-b5df-f7f43f7d0f0b}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

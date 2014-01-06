@@ -55,3 +55,17 @@ bool Inventory::ContainsItem(const Item& test)
 	InventoryMap::iterator f = inventory.find(test.Name());
 	return f != inventory.end();
 }
+
+InventoryList Inventory::Contents() const
+{
+	InventoryList list;
+	
+	for (InventoryMap::const_iterator itr = inventory.begin();
+		itr != inventory.end();
+		itr++)
+	{
+		list.push_back((*(itr)).first);
+	}
+
+	return list;
+}
