@@ -15,18 +15,29 @@ namespace Survive
 		{
 		public:
 			
+			static Survivor CreateRandomSurvivor();
+
 			Survivor();
 			Survivor(const Survivor& rhs);
 			Survivor(std::string name, int _body, int _strength, int _willpower, int _aim);
 
 			// Accessors
 			std::string GetName()	const {return name;}
+			
+			// Base Stats
 			int GetBody()			const {return body;}
 			int GetStrength()		const {return strength;}
 			int GetWillpower()		const {return willpower;}
-			int GetAim()			const {return aim;}
-            int GetHealth()         const {return health;}
+			int GetIntuition()		const {return intuition;}
             
+			// Derived Stats
+			int GetHealth()         const {return health;}
+			int GetSpeed()			const {return speed;}
+			int GetEndurance()      const {return endurance;}
+			int GetResistance()     const {return resistance;}
+			int GetReflex()         const {return reflex;}
+			int GetAim()			const {return aim;}
+
             int TakeDamage(int damageValue);
             
 			InventoryPtr GetInventory() const {return inventory;}
@@ -39,8 +50,14 @@ namespace Survive
 			int body;
 			int strength;
 			int willpower;
-			int aim;
+			int intuition;
+
             int health;
+			int speed;
+			int endurance;
+			int resistance;
+			int reflex;
+			int aim;
 
 			std::string name;
 

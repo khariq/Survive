@@ -27,10 +27,47 @@ namespace SimulationTests
 			Assert::IsTrue(true);
 		}
 
-		TEST_METHOD(AccessorTest_Aim)
+		TEST_METHOD(CreateSurvivor_DerivedStats_Health)
+		{
+			Survivor test("Joe", 1, 0, 1, 0);
+			Assert::AreEqual(test.GetHealth(), 2);
+		}
+
+		TEST_METHOD(CreateSurvivor_DerivedStats_Speed)
+		{
+			Survivor test("Joe", 1, 1, 0, 0);
+			Assert::AreEqual(test.GetSpeed(), 2);
+		}
+
+		TEST_METHOD(CreateSurvivor_DerivedStats_Endurance)
+		{
+			Survivor test("Joe", 0, 1, 1, 0);
+			Assert::AreEqual(test.GetEndurance(), 2);
+		}
+
+		TEST_METHOD(CreateSurvivor_DerivedStats_Resistance)
+		{
+			Survivor test("Joe", 1, 0, 0, 1);
+			Assert::AreEqual(test.GetResistance(), 2);
+		}
+
+		TEST_METHOD(CreateSurvivor_DerivedStats_Reflex)
+		{
+			Survivor test("Joe", 0, 1, 0, 1);
+			Assert::AreEqual(test.GetReflex(), 2);
+		}
+
+		TEST_METHOD(CreateSurvivor_DerivedStats_Aim)
+		{
+			Survivor test("Joe", 0, 0, 1, 1);
+			Assert::AreEqual(test.GetAim(), 2);
+		}
+
+
+		TEST_METHOD(AccessorTest_Intuition)
 		{
 			Survivor test("Joe", 1, 1, 1, 1);
-			Assert::AreEqual(test.GetAim(), 1);
+			Assert::AreEqual(test.GetIntuition(), 1);
 		}
 
 		TEST_METHOD(AccessorTest_Body)

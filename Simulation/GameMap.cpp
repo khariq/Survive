@@ -1,4 +1,4 @@
-#include "GameMap.h"
+#include "headers/GameMap.h"
 
 using namespace Survive::Simulation;
 
