@@ -9,8 +9,22 @@ namespace Survive {
 		class GameState
 		{
 		public:
+
+			GameState();
+
+			int GetFood()  const { return food; };
+			int GetWood()  const { return wood; };
+			int GetOil()   const { return oil; };
+			int GetTools() const {return tools; };
+
 		private:
-			Resource::
+			
+			int food;
+			int wood;
+			int oil;
+			int tools;
+
+
 		};
 	}
 }

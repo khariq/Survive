@@ -12,7 +12,7 @@ namespace Survive {
 				Wood,
 				Tools,
 				Oil
-			}
+			};
 		}
 	}
 }
