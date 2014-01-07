@@ -7,6 +7,7 @@
 #include "item.h"
 
 #define InventoryMap std::map<std::string, std::shared_ptr<Item>>
+#define InventoryPtr std::shared_ptr<Inventory>
 #define ItemPtr std::shared_ptr<Item>
 #define InventoryList std::list<std::string>
 

@@ -38,3 +38,9 @@ void Survivor::PickupItem(Item& item)
 {
 	inventory->AddItem(item);
 }
+
+int Survivor::TakeDamage(int damageValue)
+{
+    health -= damageValue;
+    return health;
+}

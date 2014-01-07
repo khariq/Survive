@@ -3,6 +3,7 @@
 
 #include "actor.h"
 #include "Inventory.h"
+#include "IDestructible.h"
 #include <string>
 #include <memory>
 
@@ -10,7 +11,7 @@ namespace Survive
 {
 	namespace Simulation 
 	{
-		class Survivor : public Actor
+		class Survivor : public Actor, public IDestructible
 		{
 		public:
 			
@@ -24,8 +25,11 @@ namespace Survive
 			int GetStrength()		const {return strength;}
 			int GetWillpower()		const {return willpower;}
 			int GetAim()			const {return aim;}
-
-			std::shared_ptr<Inventory> GetInventory() const {return inventory;}
+            int GetHealth()         const {return health;}
+            
+            int TakeDamage(int damageValue);
+            
+			InventoryPtr GetInventory() const {return inventory;}
 			
 			// Methods
 			void PickupItem(Item& item);
@@ -36,6 +40,7 @@ namespace Survive
 			int strength;
 			int willpower;
 			int aim;
+            int health;
 
 			std::string name;
 
