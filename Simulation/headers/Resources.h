@@ -11,7 +11,9 @@ namespace Survive {
 				Food,
 				Wood,
 				Tools,
-				Oil
+				Oil,
+				Gas,
+				MedicalSupplies
 			};
 		}
 	}

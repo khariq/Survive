@@ -1,5 +1,6 @@
-#ifndef Survive_Simulation_GameState_h
-#define Survive_Simulation_GameState_h
+#ifndef Survive_Simulation_GameMap_h
+#define Survive_Simulation_GameMap_h
+
 namespace Survive {
 	
 	namespace Simulation {

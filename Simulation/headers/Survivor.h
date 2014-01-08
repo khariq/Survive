@@ -3,7 +3,10 @@
 
 #include "actor.h"
 #include "Inventory.h"
-#include "IDestructible.h"
+#include "Destructible.h"
+#include "ICombatant.h"
+#include "Weapon.h"
+#include "point.h"
 #include <string>
 #include <memory>
 
@@ -11,7 +14,7 @@ namespace Survive
 {
 	namespace Simulation 
 	{
-		class Survivor : public Actor, public IDestructible
+		class Survivor : public Actor, public Destructible, public ICombatant
 		{
 		public:
 			
@@ -31,28 +34,35 @@ namespace Survive
 			int GetIntuition()		const {return intuition;}
             
 			// Derived Stats
-			int GetHealth()         const {return health;}
+			// Health is a derived stat, but it's value is tracked by the Destructible base class
 			int GetSpeed()			const {return speed;}
 			int GetEndurance()      const {return endurance;}
 			int GetResistance()     const {return resistance;}
 			int GetReflex()         const {return reflex;}
 			int GetAim()			const {return aim;}
 
-            int TakeDamage(int damageValue);
-            
 			InventoryPtr GetInventory() const {return inventory;}
 			
 			// Methods
 			void PickupItem(Item& item);
-			
+			void SetLocation(point moveTo);
+			void SetLocation(int x, int y);
+
+			//ICombatant methods
+			virtual int CalculateRangedAttackPool() const;
+			virtual int CalculateMeleeAttackPool() const;
+			virtual int CalculateRangedDefensePool() const;
+			virtual int CalculateMeleeDefensePool() const;
+			virtual Weapon& GetEquippedWeapon() const;
+			virtual point GetLocation() const;
+
 		private:
 			// Attributes
 			int body;
 			int strength;
 			int willpower;
 			int intuition;
-
-            int health;
+			            
 			int speed;
 			int endurance;
 			int resistance;
@@ -62,6 +72,8 @@ namespace Survive
 			std::string name;
 
 			std::shared_ptr<Inventory> inventory;
+
+			point location;
 
 			// Helper methods
 			void CreateInventory();

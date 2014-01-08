@@ -13,7 +13,7 @@ namespace SimulationTests
 	{
 	public:
 		
-		TEST_METHOD(AddItem)
+		TEST_METHOD(InventoryTests_AddItem)
 		{
 			Survive::Simulation::Inventory inventory;
 			Survive::Simulation::Item testItem("Test Item");
@@ -22,7 +22,7 @@ namespace SimulationTests
 			Assert::IsTrue(inventory.ContainsItem(testItem));
 		}
 
-		TEST_METHOD(AddItem_OperatorPlus)
+		TEST_METHOD(InventoryTests_AddItem_OperatorPlus)
 		{
 			Survive::Simulation::Inventory inventory;
 			Survive::Simulation::Item testItem("Test Item");
@@ -32,7 +32,7 @@ namespace SimulationTests
 			Assert::IsFalse(inventory.ContainsItem(testItem));
 		}
 
-		TEST_METHOD(AddItem_OperatorPlusEquals)
+		TEST_METHOD(InventoryTests_AddItem_OperatorPlusEquals)
 		{
 			Survive::Simulation::Inventory inventory;
 			Survive::Simulation::Item testItem("Test Item");
@@ -41,7 +41,7 @@ namespace SimulationTests
 			Assert::IsTrue(inventory.ContainsItem(testItem));
 		}
 
-		TEST_METHOD(RemoveItem)
+		TEST_METHOD(InventoryTests_RemoveItem)
 		{
 			Survive::Simulation::Inventory inventory;
 			Survive::Simulation::Item testItem("Test Item");
@@ -55,7 +55,7 @@ namespace SimulationTests
 
 		}
 
-		TEST_METHOD(RemoveItem_OperatorMinus)
+		TEST_METHOD(InventoryTests_RemoveItem_OperatorMinus)
 		{
 			Survive::Simulation::Inventory inventory;
 			Survive::Simulation::Item testItem("Test Item");
@@ -69,7 +69,7 @@ namespace SimulationTests
 			Assert::IsTrue(inventory.ContainsItem(testItem));
 		}
 
-		TEST_METHOD(RemoveItem_OperatorMinusEquals)
+		TEST_METHOD(InventoryTests_RemoveItem_OperatorMinusEquals)
 		{
 			Survive::Simulation::Inventory inventory;
 			Survive::Simulation::Item testItem("Test Item");
@@ -83,7 +83,7 @@ namespace SimulationTests
 
 		}
 
-		TEST_METHOD(ListItems)
+		TEST_METHOD(InventoryTests_ListItems)
 		{
 			Survive::Simulation::Inventory inventory;
 			Survive::Simulation::Item testItem("Test Item");

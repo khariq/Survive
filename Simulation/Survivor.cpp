@@ -1,11 +1,24 @@
 #include "headers/survivor.h"
+#include "headers/DiceRoller.h"
 #include <string>
 #include <random>
 
 using namespace std;
 using namespace Survive::Simulation;
 
-Survivor::Survivor()
+Survivor::Survivor():
+	body(0),
+	strength(0),
+	willpower(0),
+	intuition(0),
+	name(""),
+	speed(0),
+	endurance(0),
+	resistance(0),
+	reflex(0),
+	aim(0),
+	Destructible(0, 0),
+	location(0,0)
 {
 	CreateInventory();
 }
@@ -16,12 +29,13 @@ Survivor::Survivor(const Survivor& rhs) :
 	willpower(rhs.willpower),
 	intuition(rhs.intuition),
 	name(rhs.name),
-	health(rhs.health),
 	speed(rhs.speed),
 	endurance(rhs.endurance),
 	resistance(rhs.resistance),
 	reflex(rhs.reflex),
-	aim(rhs.aim)
+	aim(rhs.aim),
+	Destructible(rhs.body + rhs.willpower, rhs.body + rhs.willpower),
+	location(rhs.location.x, rhs.location.y)
 {
 	CreateInventory();
 }
@@ -32,12 +46,13 @@ Survivor::Survivor(string _name, int _body, int _strength, int _willpower, int _
 	willpower(_willpower),
 	intuition(_intuition),
 	name(_name),
-	health(_body + _willpower),
 	speed(_body + _strength),
 	endurance(_strength + _willpower),
 	resistance(_body + _intuition),
 	reflex(_strength + _intuition),
-	aim(_intuition + _willpower)
+	aim(_intuition + _willpower),
+	Destructible(_body + _willpower ,_body + _willpower),
+	location(0,0)
 {
 	CreateInventory();
 }
@@ -52,15 +67,51 @@ void Survivor::PickupItem(Item& item)
 	inventory->AddItem(item);
 }
 
-int Survivor::TakeDamage(int damageValue)
-{
-    health -= damageValue;
-    return health;
-}
-
 Survivor Survivor::CreateRandomSurvivor()
 {
+	return Survivor("Random", DiceRoller::RollD6(), DiceRoller::RollD6(),DiceRoller::RollD6(),DiceRoller::RollD6());
+	
+}
 
-	return Survivor();
+//IAttacker methods
+int Survivor::CalculateRangedAttackPool() const
+{
+	return aim;
+}
+int Survivor::CalculateMeleeAttackPool() const
+{
+	return speed + reflex;
+}
 
+// IDefender methods
+int Survivor::CalculateRangedDefensePool() const
+{
+	return reflex;
+}
+int Survivor::CalculateMeleeDefensePool() const
+{
+	return reflex + speed;
+}
+
+Weapon& Survivor::GetEquippedWeapon() const
+{
+	return Weapon();
+}
+
+
+void Survivor::SetLocation(int x, int y)
+{
+	location.x = x;
+	location.y = y;
+}
+
+void Survivor::SetLocation(point moveTo)
+{
+	location.x = moveTo.x;
+	location.y = moveTo.y;
+}
+
+point Survivor::GetLocation() const
+{
+	return location;
 }
