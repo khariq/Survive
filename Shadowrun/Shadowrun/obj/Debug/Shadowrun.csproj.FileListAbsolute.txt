@@ -1,0 +1,6 @@
+C:\Users\u0064666\Documents\GitHub\Survive\Shadowrun\Shadowrun\bin\Debug\Shadowrun.exe.config
+C:\Users\u0064666\Documents\GitHub\Survive\Shadowrun\Shadowrun\bin\Debug\Shadowrun.exe
+C:\Users\u0064666\Documents\GitHub\Survive\Shadowrun\Shadowrun\bin\Debug\Shadowrun.pdb
+C:\Users\u0064666\Documents\GitHub\Survive\Shadowrun\Shadowrun\obj\Debug\Shadowrun.csprojResolveAssemblyReference.cache
+C:\Users\u0064666\Documents\GitHub\Survive\Shadowrun\Shadowrun\obj\Debug\Shadowrun.exe
+C:\Users\u0064666\Documents\GitHub\Survive\Shadowrun\Shadowrun\obj\Debug\Shadowrun.pdb

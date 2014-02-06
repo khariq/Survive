@@ -1,0 +1,5 @@
+C:\Users\u0064666\Documents\GitHub\Survive\CSharp\Simulation\bin\Debug\Simulation.dll
+C:\Users\u0064666\Documents\GitHub\Survive\CSharp\Simulation\bin\Debug\Simulation.pdb
+C:\Users\u0064666\Documents\GitHub\Survive\CSharp\Simulation\obj\Debug\Simulation.csprojResolveAssemblyReference.cache
+C:\Users\u0064666\Documents\GitHub\Survive\CSharp\Simulation\obj\Debug\Simulation.dll
+C:\Users\u0064666\Documents\GitHub\Survive\CSharp\Simulation\obj\Debug\Simulation.pdb

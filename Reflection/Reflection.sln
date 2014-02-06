@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection", "Reflection\Reflection.csproj", "{BC441D85-051C-4AB9-AB43-146CA1EAF072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDEMgmtConsole.Entity", "..\..\..\..\..\..\PDE\ManagementConsole\Development\PDEMgmtConsole.Entity\PDEMgmtConsole.Entity.csproj", "{9564EC28-109C-45C7-A1F3-428807984302}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://dls8app:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = ..\\..\\..\\..\\..\\..\\PDE\\ManagementConsole\\Development\\PDEMgmtConsole.Entity\\PDEMgmtConsole.Entity.csproj
+		SccProjectName0 = $/PDE/ManagementConsole/Development/PDEMgmtConsole.Entity
+		SccAuxPath0 = http://dls8app:8080/tfs/defaultcollection
+		SccLocalPath0 = ..\\..\\..\\..\\..\\..\\PDE\\ManagementConsole\\Development\\PDEMgmtConsole.Entity
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Integration|Any CPU = Integration|Any CPU
+		ProdQA|Any CPU = ProdQA|Any CPU
+		QA|Any CPU = QA|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.Integration|Any CPU.ActiveCfg = Release|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.Integration|Any CPU.Build.0 = Release|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.ProdQA|Any CPU.ActiveCfg = Release|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.ProdQA|Any CPU.Build.0 = Release|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.QA|Any CPU.Build.0 = Release|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.Staging|Any CPU.ActiveCfg = Release|Any CPU
+		{BC441D85-051C-4AB9-AB43-146CA1EAF072}.Staging|Any CPU.Build.0 = Release|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.Integration|Any CPU.ActiveCfg = Integration|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.Integration|Any CPU.Build.0 = Integration|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.ProdQA|Any CPU.ActiveCfg = ProdQA|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.ProdQA|Any CPU.Build.0 = ProdQA|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.QA|Any CPU.Build.0 = QA|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{9564EC28-109C-45C7-A1F3-428807984302}.Staging|Any CPU.Build.0 = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
